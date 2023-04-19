@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //Usando a noção literal
+     const obj1 = {}
+     console.log(obj1)
+
+     const obj2 = new Object
+     console.log(obj2)
+
+    //Função contrutora
+   function produto(nome, preco, desconto){
+    this.nome = nome
+    this.getPrecoComDesconto = () => {
+        return preco * (1 - desconto)
+    }
+   }
+
+    const p1 = new produto('Caneta', 7.99, 0.15)
+    const p2 = new produto('notbook', 7774.99, 0.25)
+    console.log(p1.nome, p2.nome)
+    console.log(p1.getPrecoComDesconto().toFixed(2))
+    console.log(p2.getPrecoComDesconto().toFixed(2))
+    </script>
+</body>
+</html>
